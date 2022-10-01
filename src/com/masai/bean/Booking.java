@@ -1,6 +1,7 @@
 package com.masai.bean;
 
 public class Booking {
+	private int bkid;
 	private int cid;
 	private int bid;
 	
@@ -8,10 +9,19 @@ public class Booking {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Booking(int cid, int bid) {
+	public Booking(int cid, int bid, int bkid) {
 		super();
+		this.bkid = bkid;
 		this.cid = cid;
 		this.bid = bid;
+	}
+
+	public int getBkid() {
+		return bkid;
+	}
+
+	public void setBkid(int bkid) {
+		this.bkid = bkid;
 	}
 
 	public int getCid() {
@@ -32,8 +42,9 @@ public class Booking {
 
 	@Override
 	public String toString() {
-		return "Booking [cid=" + cid + ", bid=" + bid + "]";
+		return "Booking [bkid=" + bkid + ", cid=" + cid + ", bid=" + bid + "]";
 	}
+
 	
 	
 }

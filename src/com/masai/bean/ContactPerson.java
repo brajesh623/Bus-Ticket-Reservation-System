@@ -1,7 +1,7 @@
 package com.masai.bean;
 
 public class ContactPerson {
-	private int bid;
+	private int cpid;
 	private String name;
 	private String mobile;
 	
@@ -9,19 +9,19 @@ public class ContactPerson {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ContactPerson(int bid, String name, String mobile) {
+	public ContactPerson(int cpid, String name, String mobile) {
 		super();
-		this.bid = bid;
+		this.cpid = cpid;
 		this.name = name;
 		this.mobile = mobile;
 	}
 
-	public int getBid() {
-		return bid;
+	public int getCpid() {
+		return cpid;
 	}
 
-	public void setBid(int bid) {
-		this.bid = bid;
+	public void setCpid(int cpid) {
+		this.cpid = cpid;
 	}
 
 	public String getName() {
@@ -42,7 +42,7 @@ public class ContactPerson {
 
 	@Override
 	public String toString() {
-		return "ContactPerson [bid=" + bid + ", name=" + name + ", mobile=" + mobile + "]";
+		return "ContactPerson [cpid=" + cpid + ", name=" + name + ", mobile=" + mobile + "]";
 	}
 	
 	
