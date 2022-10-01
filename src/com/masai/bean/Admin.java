@@ -1,7 +1,7 @@
 package com.masai.bean;
 
 public class Admin {
-	private int cid;
+	private int userid;
 	private String email;
 	private String password;
 	
@@ -9,19 +9,19 @@ public class Admin {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Admin(int cid, String email, String password) {
+	public Admin(int userid, String email, String password) {
 		super();
-		this.cid = cid;
+		this.userid = userid;
 		this.email = email;
 		this.password = password;
 	}
 
-	public int getCid() {
-		return cid;
+	public int getUserid() {
+		return userid;
 	}
 
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setUserid(int userid) {
+		this.userid = userid;
 	}
 
 	public String getEmail() {
@@ -42,7 +42,7 @@ public class Admin {
 
 	@Override
 	public String toString() {
-		return "Admin [cid=" + cid + ", email=" + email + ", password=" + password + "]";
+		return "Admin [userid=" + userid + ", email=" + email + ", password=" + password + "]";
 	}
 	
 	
