@@ -16,17 +16,17 @@ public class GetBusData {
 		List<Bus> bus= dao.getBusData();
 		
 		bus.forEach(b ->{
+			System.out.println("============================================");
+			System.out.println("Bus ID          : "+b.getBid());
+			System.out.println("Bus name        : "+b.getName());
+			System.out.println("Bus Type        : "+b.getType());
+			System.out.println("Bus source      : "+b.getSource());
+			System.out.println("Bus Destination : "+b.getDest());
+			System.out.println("Bus Departure   : "+b.getDept());
+			System.out.println("Bus Arrival     : "+b.getArrival());
+			System.out.println("Total seats     : "+b.getSeat());
 			
-			System.out.println("Bus ID :"+b.getBid());
-			System.out.println("Bus name: "+b.getName());
-			System.out.println("Bus Type :"+b.getType());
-			System.out.println("Bus source: "+b.getSource());
-			System.out.println("Bus Destination :"+b.getDest());
-			System.out.println("Bus Departure: "+b.getDept());
-			System.out.println("Bus Arrival :"+b.getArrival());
-			System.out.println("Total seats: "+b.getSeat());
 			
-			System.out.println("=======================");
 		});
 		
 		

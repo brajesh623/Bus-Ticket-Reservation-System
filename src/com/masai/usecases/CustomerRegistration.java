@@ -29,7 +29,7 @@ public class CustomerRegistration {
 		
 		
 		String result= dao.registerCustomer(customer);
-		
+		System.out.println("============================================");
 		System.out.println(result);
 
 	}

@@ -18,9 +18,16 @@ public class Main {
 		Scanner sc=new Scanner(System.in);
 		Boolean y=true;
 		while(y) {
-			System.out.println("Welcome To Bus Ticket Reservation System.");
-			System.out.println("============================================================");
-			System.out.println("Select Any option :\n1. Admin Login\n2. Customer Registration\n3. Customer Login\n4. Exit\nEnter your choice :");
+			System.out.println("============================================");
+			System.out.println("‖ Welcome To Bus Ticket Reservation System. ‖");
+			System.out.println("============================================");
+			System.out.println("‖ Select Any option :                       ‖");
+			System.out.println("‖ 1. Admin Login                            ‖");
+			System.out.println("‖ 2. Customer Registration                  ‖");
+			System.out.println("‖ 3. Customer Login                         ‖");
+			System.out.println("‖ 4. Exit                                   ‖");
+			System.out.println("============================================");
+			System.out.println("Enter your choice :");
 			int ch=sc.nextInt();
 			switch(ch) {
 				case 1:
@@ -28,8 +35,15 @@ public class Main {
 					if(status) {
 						Boolean x=true;
 						while(x) {
-							System.out.println("==================================================");
-							System.out.println("Select any option :\n1. Get all Buses\n2. Get seat confirmation\n3. Get contact Person\n4. Back to previous options\n5. Exit\nEnter your choice :");
+							System.out.println("============================================");
+							System.out.println("‖ Select Any option :                       ‖");
+							System.out.println("‖ 1. Get all Buses                          ‖");
+							System.out.println("‖ 2. Get seat confirmation                  ‖");
+							System.out.println("‖ 3. Get contact Person                     ‖");
+							System.out.println("‖ 4. Back to previous options               ‖");
+							System.out.println("‖ 5. Exit                                   ‖");
+							System.out.println("============================================");
+							System.out.println("Enter your choice :");
 							int ach=sc.nextInt();
 							switch(ach) {
 								case 1:
@@ -42,11 +56,12 @@ public class Main {
 									GetContactPerson.get();
 									break;
 								case 4:
-									System.out.println("Thank You!");
 									x=false;
 									break;
 								case 5:
-									System.out.println("Thank You!");
+									System.out.println("=============");
+									System.out.println("‖ Thank You! ‖");
+									System.out.println("=============");
 									x=false;
 									y=false;
 									break;
@@ -66,8 +81,14 @@ public class Main {
 					if(status1) {
 						Boolean z=true;
 						while(z) {
-							System.out.println("=======================================================");
-							System.out.println("Select any option :\n1. Book Ticket\n2. Cancel Ticket\n3. Back to previous options\n4. Exit\nEnter your choice :");
+							System.out.println("============================================");
+							System.out.println("‖ Select Any option :                       ‖");
+							System.out.println("‖ 1. Book Ticket                            ‖");
+							System.out.println("‖ 2. Cancel Ticket                          ‖");
+							System.out.println("‖ 3. Back to previous options               ‖");
+							System.out.println("‖ 4. Exit                                   ‖");
+							System.out.println("============================================");
+							System.out.println("Enter your choice :");
 							int cch=sc.nextInt();
 							switch(cch) {
 								case 1:
@@ -77,11 +98,12 @@ public class Main {
 									CancelTicket.cancel();
 									break;
 								case 3:
-									System.out.println("Thank You!");
 									z=false;
 									break;
 								case 4:
-									System.out.println("Thank You!");
+									System.out.println("=============");
+									System.out.println("‖ Thank You! ‖");
+									System.out.println("=============");
 									z=false;
 									y=false;
 									break;
@@ -93,7 +115,9 @@ public class Main {
 					}
 					break;
 				case 4:
-					System.out.println("Thank You!");
+					System.out.println("=============");
+					System.out.println("‖ Thank You! ‖");
+					System.out.println("=============");
 					y=false;
 					break;
 				default :

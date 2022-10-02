@@ -25,7 +25,8 @@ public class CustomerLogin {
 		try {
 			Customer customer= dao.loginCustomer(uname, pass);
 			status=true;
-	 		System.out.println("Welcome Customer");
+			System.out.println("============================================");
+	 		System.out.println("‖              Welcome Customer             ‖");
 	 	
 	 	
 		}catch (CustomerExeption e) {

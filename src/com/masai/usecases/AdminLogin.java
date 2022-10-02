@@ -24,8 +24,9 @@ public class AdminLogin {
 		try {
 			Admin admin= dao.loginAdmin(uname, pass);
 			status=true;
-	 		System.out.println("Welcome Admin");
-	 	
+			System.out.println("============================================");
+	 		System.out.println("‖               Welcome Admin               ‖");
+	 		
 	 	
 		}catch (AdminException e) {
 			System.out.println(e.getMessage());

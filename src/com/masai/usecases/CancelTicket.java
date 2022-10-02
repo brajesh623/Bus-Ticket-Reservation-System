@@ -18,7 +18,8 @@ public class CancelTicket {
 		try {
 			 status= dao.cancelTicket(id);
 			 if(status) {
-				 System.out.println("Ticket Cancelled.");
+				 System.out.println("============================================");
+				 System.out.println("‖              Ticket Cancelled.            ‖");
 			 }
 			
 			

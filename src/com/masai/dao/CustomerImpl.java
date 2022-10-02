@@ -39,7 +39,8 @@ public class CustomerImpl implements CustomerDao{
 			
 			
 			if(x > 0)
-				message = "Customer Registered Sucessfully !";
+				
+				message= "‖      Customer Registered Sucessfully !    ‖";
 			
 			
 			

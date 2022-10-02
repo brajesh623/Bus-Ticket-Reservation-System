@@ -21,10 +21,10 @@ public class GetContactPerson {
 		
 		try {
 		 c= admin.getContactPerson(id);
-			
-		System.out.println("Contact Person Id :"+c.getCpid());
-		System.out.println("Contact Person name: "+c.getName());
-		System.out.println("Contact Person mobile: "+c.getMobile());
+		 System.out.println("============================================");	
+		 System.out.println("Contact Person Id     :"+c.getCpid());
+		 System.out.println("Contact Person name   : "+c.getName());
+		 System.out.println("Contact Person mobile : "+c.getMobile());
 		
 
 		}catch(ContactPersonException se) {

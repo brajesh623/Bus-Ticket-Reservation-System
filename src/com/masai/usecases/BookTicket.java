@@ -21,10 +21,12 @@ public class BookTicket {
 		Booking b=new Booking();
 		try {
 			 b= dao.bookTicket(source, dest);
-				
-			System.out.println("Booking Id :"+b.getBkid());
-			System.out.println("Customer Id: "+b.getCid());
-			System.out.println("Bus Id: "+b.getBid());
+			 System.out.println("============================================");
+			 System.out.println("‖               Ticket Details              ‖");
+			 System.out.println("============================================");
+			 System.out.println("Booking Id  : "+b.getBkid());
+			 System.out.println("Customer Id : "+b.getCid());
+			 System.out.println("Bus Id      : "+b.getBid());
 			
 
 			}catch(BookingException se) {

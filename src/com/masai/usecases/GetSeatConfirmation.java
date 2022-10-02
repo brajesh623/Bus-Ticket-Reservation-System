@@ -22,10 +22,10 @@ public class GetSeatConfirmation {
 		
 		try {
 		 b= admin.getSeatConfirmation(id);
-			
-		System.out.println("Booking Id :"+b.getBkid());
-		System.out.println("Customer Id: "+b.getCid());
-		System.out.println("Bus Id: "+b.getBid());
+		System.out.println("============================================");	
+		System.out.println("Booking Id  : "+b.getBkid());
+		System.out.println("Customer Id : "+b.getCid());
+		System.out.println("Bus Id      : "+b.getBid());
 		
 
 		}catch(BookingException se) {
