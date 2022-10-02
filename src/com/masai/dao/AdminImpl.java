@@ -92,12 +92,12 @@ public class AdminImpl implements AdminDao{
 	}
 
 	@Override
-	public Booking getSeatConfirmation(int customerid) throws BookingException {
+	public Booking getSeatConfirmation(int bookingid) throws BookingException {
 		// TODO Auto-generated method stub
 		Booking booking=null;
 		try (Connection conn = DBUtil.provideConnection()){
-			PreparedStatement ps= conn.prepareStatement("select * from booking where cid=?");
-			ps.setInt(1, customerid);
+			PreparedStatement ps= conn.prepareStatement("select * from booking where bkid=?");
+			ps.setInt(1, bookingid);
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()) {
 				int bkid=rs.getInt("bkid");
@@ -126,7 +126,7 @@ public class AdminImpl implements AdminDao{
 		// TODO Auto-generated method stub
 		ContactPerson cp=null;
 		try (Connection conn = DBUtil.provideConnection()){
-			PreparedStatement ps= conn.prepareStatement("select * from contact_person where bid=?");
+			PreparedStatement ps= conn.prepareStatement("select cp.cpid,cp.name,cp.mobile,b.bid from contact_person cp,bus b where cp.cpid=b.cpid and b.bid=?");
 			ps.setInt(1, busid);
 			ResultSet rs=ps.executeQuery();
 			if(rs.next()) {

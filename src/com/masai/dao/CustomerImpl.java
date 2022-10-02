@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 import com.masai.bean.Admin;
 import com.masai.bean.Booking;
@@ -14,7 +15,44 @@ import com.masai.exception.CustomerExeption;
 import com.masai.utility.DBUtil;
 
 public class CustomerImpl implements CustomerDao{
-	int cid=0;
+	static int cid=0;
+	
+	@Override
+	public String registerCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		String message = "Not Inserted..";
+	
+		
+	
+		
+		try(Connection conn= DBUtil.provideConnection()) {
+			
+			PreparedStatement ps= conn.prepareStatement
+					("insert into customer(email,password) values(?,?)");
+			
+			
+			
+			ps.setString(1, customer.getEmail());
+			ps.setString(2, customer.getPassword());
+			
+			int x= ps.executeUpdate();
+			
+			
+			if(x > 0)
+				message = "Customer Registered Sucessfully !";
+			
+			
+			
+		} catch (SQLException e) {
+			message = e.getMessage();
+		}
+		
+		
+	
+	
+		
+		return message;
+	}
 	@Override
 	public Customer loginCustomer(String username, String password) throws CustomerExeption {
 		// TODO Auto-generated method stub
@@ -22,7 +60,7 @@ public class CustomerImpl implements CustomerDao{
 		try(Connection conn = DBUtil.provideConnection()) {
 			
 			
-			PreparedStatement ps= conn.prepareStatement("select * from admin where email = ? AND password = ?");			
+			PreparedStatement ps= conn.prepareStatement("select * from customer where email = ? AND password = ?");			
 			
 			ps.setString(1, username);
 			ps.setString(2, password);
@@ -34,8 +72,7 @@ public class CustomerImpl implements CustomerDao{
 				int id= rs.getInt("cid");
 				String e= rs.getString("Email");
 				String p= rs.getString("password");
-				cid=id;
-				
+				this.cid=id;
 			customer=new Customer(id,e,p);	
 				
 				
@@ -84,7 +121,7 @@ public class CustomerImpl implements CustomerDao{
 		}
 		
 		try (Connection conn = DBUtil.provideConnection()){
-			PreparedStatement ps= conn.prepareStatement("update table bus_link set seat=seat-1 where bild=?");
+			PreparedStatement ps= conn.prepareStatement("update bus_link set seat=seat-1 where blid=?");
 			ps.setInt(1, blid);
 			int x=ps.executeUpdate();
 			
@@ -95,9 +132,9 @@ public class CustomerImpl implements CustomerDao{
 				bid=rs.getInt("bid");
 			}
 			PreparedStatement ps3= conn.prepareStatement("insert into booking(bid,cid) values(?,?)");
-			ps.setInt(1, bid);
-			ps.setInt(2, cid);
-			int x1=ps.executeUpdate();
+			ps3.setInt(1, bid);
+			ps3.setInt(2, cid);
+			int x1=ps3.executeUpdate();
 			if(x1>0) {
 				PreparedStatement ps4= conn.prepareStatement("select bkid from booking order by bkid desc limit 1");
 				ResultSet rs1=ps4.executeQuery();
@@ -125,7 +162,7 @@ public class CustomerImpl implements CustomerDao{
 		// TODO Auto-generated method stub
 		Boolean flag=false;
 		try (Connection conn = DBUtil.provideConnection()){
-			PreparedStatement ps= conn.prepareStatement("delete from bookimg where bkid=?");
+			PreparedStatement ps= conn.prepareStatement("delete from booking where bkid=?");
 			ps.setInt(1, bookingId);
 			
 			int x=ps.executeUpdate();

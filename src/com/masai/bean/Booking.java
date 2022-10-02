@@ -9,7 +9,7 @@ public class Booking {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Booking(int cid, int bid, int bkid) {
+	public Booking(int bkid,int cid, int bid) {
 		super();
 		this.bkid = bkid;
 		this.cid = cid;
