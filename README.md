@@ -1,4 +1,4 @@
-				                     Bus Ticket Reservation System
+				Bus Ticket Reservation System
 Project code :- cloudy-thing-7898<br/>
 TECH STACK :- Java, JDBC, MySQL <br/>
 Problem Description:<br/>
